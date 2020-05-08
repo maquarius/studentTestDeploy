@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import bookstoreJPAdatabase2.BookstoreJpAdatbase2Application;
 import bookstoreJPAdatabase2.web.StudentController;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = BookstoreJpAdatbase2Application.class)
 class BookstoreJpAdatbase2ApplicationTests {
 
 	@Autowired

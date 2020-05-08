@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>add Student</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Add student</h1>
+	<div>
+		<form th:object="${student}" th:action="@{../save}" action="#"
+			method="post">
+			<input type="hidden" th:field="*{id}" /> <label for="fname">First
+				Name</label> <input type="text" id="fname" th:field="*{firstName}" /> <label
+				for="flname">Last Name</label> <input type="text" id="lname"
+				th:field="*{lastName}" /> <label for="email">E-Mail</label> <input
+				type="text" id="email" th:field="*{email}" /> <label for="deplist">Department</label>
+			<select id="deplist" th:field="*{department}">
+				<option th:each="department : ${departments}"
+					th:value="${department.id}" th:text="${department.name}">
+				</option>
+			</select> <input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ import bookstoreJPAdatabase2.domain.Department;
 import bookstoreJPAdatabase2.domain.DepartmentRepository;
 import bookstoreJPAdatabase2.domain.Student;
 import bookstoreJPAdatabase2.domain.StudentRepository;
-import bookstoreJPAdatabase2.domain.User;
+import bookstoreJPAdatabase2.domain.UserPerson;
 import bookstoreJPAdatabase2.domain.UserRepository;
 
 @SpringBootApplication
@@ -42,8 +42,8 @@ public class BookstoreJpAdatbase2Application {
 					drepository.findByName("science").get(0)));
 
 			Log.info("Creating some Users");
-			User user1 = new User("user", "$2a$10$kkGrBvtYWvSlEeiNR9tgRuMQ1auKbdCi/NzuDthsJ/5YbK6kZIQLC", "USER");
-			User user2 = new User("admin", "$2a$10$82i27yeufHQnPBHQceTNVuFJkwsKnZfx.VLmoeWm7jiNSeoSdAuvW", "ADMIN");
+			UserPerson user1 = new UserPerson("user2", "$2a$10$kkGrBvtYWvSlEeiNR9tgRuMQ1auKbdCi/NzuDthsJ/5YbK6kZIQLC", "USER");
+			UserPerson user2 = new UserPerson("admin2", "$2a$10$82i27yeufHQnPBHQceTNVuFJkwsKnZfx.VLmoeWm7jiNSeoSdAuvW", "ADMIN");
 			urepository.save(user1);
 			urepository.save(user2);
 		};
